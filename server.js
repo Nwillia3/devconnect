@@ -1,11 +1,19 @@
-const app = require("exoress")();
+const app = require("express")();
+const connectDB = require("./config/db");
 
-const PORT = process.env.PORT || 5000;
+//initialize database
+connectDB();
 
 app.get("/", (req, res) => {
-  res.send("Port running...");
+  res.send("Port running...    ");
 });
 
+// Define the routes
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/posts", require("./routes/api/post"));
+app.use("/api/profile", require("./routes/api/profile"));
+app.use("/api/auth", require("./routes/api/auth"));
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server started on ${port}`);
+  console.log(`Server started on ${PORT}`);
 });

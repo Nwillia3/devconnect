@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://dbuser:dbuserpassword@cluster0-p2hvo.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://dbuser:dbuserpassword@cluster0-p2hvo.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "ballislife"
 }

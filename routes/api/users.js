@@ -7,8 +7,8 @@ const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator");
 const User = require("../../models/Users");
 
-// @route   GET api/users
-// @desc   Test Route
+// @route   POST api/users
+// @desc   create a user
 // @access Public
 router.post(
   "/",
@@ -73,7 +73,7 @@ router.post(
           if (err) throw err;
           res.json({ token });
         }
-      ); // if it doesnt work then it is token
+      );
     } catch (error) {
       console.error(error.message);
       return res.status(500).json({ error: error.message });

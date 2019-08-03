@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://dbuser:dbuserpassword@cluster0-p2hvo.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "ballislife"
+  "jwtSecret": "ballislife",
+  "githubClientId": "1b74479e44e1a84cdc65",
+  "githubSecret": "916fc97b2d49d9c16ea080f8b19246392a7597a0"
 }

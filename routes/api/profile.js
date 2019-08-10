@@ -8,7 +8,7 @@ const request = require("request");
 const config = require("config");
 
 //@route GET api/profile/me
-//@desc get current user profile
+//@desc   get current user profile
 //@access Private
 
 router.get("/me", auth, async (req, res) => {
@@ -20,7 +20,7 @@ router.get("/me", auth, async (req, res) => {
     );
 
     if (!profile)
-      res.status(400).json({ msg: "There is no profile for this user" });
+      return res.status(400).json({ msg: "There is no profile for this user" });
 
     res.send(profile);
   } catch (error) {
@@ -29,8 +29,8 @@ router.get("/me", auth, async (req, res) => {
   }
 });
 
-//@route Post api/profile
-//@desc Create/ Update Profile for User
+//@route  Post api/profile
+//@desc   Create/ Update Profile for User
 //@access Private
 router.post(
   "/",

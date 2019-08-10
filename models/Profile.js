@@ -4,7 +4,7 @@ const profileSchema = new mongoose.Schema({
   // reference the user model
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user" // could be user
+    ref: "user"
   },
   handle: {
     type: String,

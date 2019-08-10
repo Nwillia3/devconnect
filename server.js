@@ -23,6 +23,10 @@ app.use("/api/posts", post);
 app.use("/api/profile", profile);
 app.use("/api/auth", auth);
 
+app.get("/", (req, res) => {
+  res.send("Running....");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);

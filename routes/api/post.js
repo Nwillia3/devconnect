@@ -36,6 +36,8 @@ router.post(
 
       const post = await newPost.save();
 
+      //come here
+
       res.json(post);
     } catch (err) {
       console.error(err.messgae);
@@ -77,13 +79,11 @@ router.get("/:id", auth, async (req, res) => {
   }
 });
 
-//@route Delete /api/posts/
-// @desc get all post
+//@route  Delete /api/posts/:id
+// @desc  get a post
 //@access Private
 
 router.delete("/:id", auth, async (req, res) => {
-  const post = await Post.findOneAndDelete(req.params);
-
   try {
     const post = await Post.findById(req.params.id);
 
@@ -133,7 +133,7 @@ router.put("/like/:id", auth, async (req, res) => {
 });
 
 //@route put /api/posts/unlike/:id
-// @desc  like a post
+// @desc  unlike a post
 //@access Private
 
 router.put("/unlike/:id", auth, async (req, res) => {

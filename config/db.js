@@ -9,9 +9,9 @@ const connectDB = async () => {
       useCreateIndex: true,
       useFindAndModify: false
     });
-    console.log("mongodb connected");
-  } catch (error) {
-    console.error({ error: error.message });
+    console.log("mongoDB connected");
+  } catch (err) {
+    console.error({ error: err.message });
     //exit process with failure
     process.exit(1);
   }

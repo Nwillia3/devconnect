@@ -8,8 +8,8 @@ const { check, validationResult } = require("express-validator");
 
 const User = require("../../models/Users");
 
-//@route GET /api/auth
-//@desc authoriization
+//@route  GET /api/auth
+//@desc   authorization
 //@access Private/protected route
 
 router.get("/", auth, async (req, res) => {
@@ -20,11 +20,11 @@ router.get("/", auth, async (req, res) => {
     console.error(error);
     res.status(500).send("Server error");
   }
-  res.send("Auth route");
+  // res.send("Auth route");
 });
 
-// @route   GET api/auth
-// @desc   Authenicate USer & get token
+// @route  GET api/auth
+// @desc   Authenicate user & get token
 // @access Public
 router.post(
   "/",
